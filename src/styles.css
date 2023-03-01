@@ -1,0 +1,65 @@
+/* Estilos del componente del menú */
+.menu {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../../fondos/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+/* Estilos del componente de la página de login */
+.login-page-container {
+    height: 100vh;
+    background-image: url('../../fondos/loginfondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-page-container {
+    font-family: 'Sriracha-Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 15%;
+}
+
+.login-page-container h1 {
+    animation: slideInRight 1s ease;
+    font-weight: bold;
+    font-family: 'Sriracha-Regular';
+}
+
+.login-page-container button {
+    animation: slideInRight 1s ease;
+    font-weight: bold;
+}
+
+.my-nav {
+    animation-duration: 0.5s;
+    /* Cambia el valor por el deseado (en segundos) */
+}
+
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@font-face {
+    font-family: 'Sriracha-Regular';
+    src: url('../../fonts/Sriracha-Regular.woff2') format('woff2'),
+         url('../../fonts/Sriracha-Regular.wof') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
