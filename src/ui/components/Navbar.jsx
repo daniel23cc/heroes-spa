@@ -1,21 +1,26 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth';
 
 
 export const Navbar = (props) => {
 
     const navigate = useNavigate()
-    //console.log(props)
+    const { user, logout } = useContext(AuthContext)
+    //console.log(user)
 
     const onLogout = () => {
         navigate('/login', {
             replace: true,
         })
+
+        logout()
     }
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2 animate__animated animate__backInLeft my-nav">
             <img
-                src="../../logos/logo.png"
+                src="/logos/logo.png"
                 alt="Logo"
                 width="60"
                 height="40"
@@ -25,7 +30,7 @@ export const Navbar = (props) => {
                 className="navbar-brand"
                 to="/"
             >
-                Asociaciones
+                Home
             </Link>
 
             <div className="navbar-collapse">
@@ -49,7 +54,7 @@ export const Navbar = (props) => {
                         className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                         to="/search"
                     >
-                        Search
+                        Buscar
                     </NavLink>
                 </div>
             </div>
@@ -57,14 +62,16 @@ export const Navbar = (props) => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <span className='nav-item nav-link text-primary'>
-                        Fernando
+                        {
+                            user?.name
+                        }
                     </span>
 
                     <button
                         className='nav-item nav-link btn'
                         onClick={onLogout}
                     >
-                        Logout
+                        Cerrar sesión
                     </button>
                 </ul>
             </div>

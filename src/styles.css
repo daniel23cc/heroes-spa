@@ -1,7 +1,7 @@
 /* Estilos del componente del menú */
 .menu {
     font-family: 'Roboto', sans-serif;
-    background-image: url('../../fondos/fondo.jpg');
+    background-image: url('/fondos/fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -14,7 +14,7 @@
 /* Estilos del componente de la página de login */
 .login-page-container {
     height: 100vh;
-    background-image: url('../../fondos/loginfondo.jpg');
+    background-image: url('/fondos/loginfondo.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -56,10 +56,3 @@
 }
 
 
-@font-face {
-    font-family: 'Sriracha-Regular';
-    src: url('../../fonts/Sriracha-Regular.woff2') format('woff2'),
-         url('../../fonts/Sriracha-Regular.wof') format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
